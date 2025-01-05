@@ -73,7 +73,8 @@
                     <label class="task-check">
                         <input type="checkbox" id="check" hidden="" class="task-checkbox" :checked="task.completed" @change="toggleTask(index)" />
                         <label for="check" class="checkmark"></label>
-                        <span :class="{ 'completed-task': task.completed }">{{ task.text }}</span>
+                        <span :class="{ 'completed-task': task.completed }">
+                            {{ index + 1 }}. {{ task.text }}</span>
                     </label>
                     <div class="buttons-options">
                         <button v-if="!task.completed" @click="startEditing(index)" class="edit">
