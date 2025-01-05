@@ -334,17 +334,17 @@
     }
 
 /* Para móviles y pantallas pequeñas (480px o menos) */
-@media (max-width: 480px) {
+@media (max-width: 580px) {
     .sub-container {
-        width: 290px; /* Reduce aún más el ancho */
-        padding: 15px; /* Reduce el padding */
+        width: 320px; /* Reduce aún más el ancho */
+        padding: 16px; /* Reduce el padding */
         gap: 10px;
     }
 
     .task-container {
-        width: 290px; /* Reduce aún más el ancho */
+        width: 320px; /* Reduce aún más el ancho */
         max-height: 300px;
-        padding: 15px; /* Reduce el padding */
+        padding: 16px; /* Reduce el padding */
         gap: 10px;
         overflow-y: auto; 
         padding: 10px;
@@ -357,7 +357,7 @@
     }
 
     .write {
-        width: 180px;
+        width: 200px;
     }
 
     h1 {
@@ -384,7 +384,7 @@
     }
 
     .edit-task {
-        width: 180px;
+        width: 200px;
         height: 10px;
         padding: 8px;
         font-size: 12px;
