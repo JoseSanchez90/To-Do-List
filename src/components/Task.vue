@@ -282,7 +282,7 @@
         display: block;
         width: 20px;
         height: 20px;
-        background-color: rgb(100, 135, 255);
+        background-color: rgb(126, 156, 255);
         border-radius: 4px;
         position: relative;
         transition: background-color 0.4s;
@@ -381,7 +381,7 @@
         display: block;
         width: 20px;
         height: 20px;
-        background-color: rgb(100, 135, 255);
+        background-color: rgb(126, 156, 255);
         border-radius: 4px;
         position: relative;
         transition: background-color 0.4s;
