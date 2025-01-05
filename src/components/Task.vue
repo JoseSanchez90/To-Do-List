@@ -157,47 +157,27 @@
         width: 100px;
         height: 30px;
         font-size: 14px;
-        text-decoration: none;
         font-weight: 500;
-        background: rgb(100, 100, 100);
-        color: white;
-        cursor: pointer;
-        position: relative;
-        display: inline-block;
-        outline: none;
-        text-align: center;
         z-index: 2;
-        transition: all 0.3s ease;
-        overflow: hidden;
-    }
-
-    .btn::after {
-        position: absolute;
-        content: " ";
-        z-index: -1;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transition: all 0.3s ease;
+        border-radius: 4px; /* Bordes redondeados */
+        border: none; /* Sin borde */
+        background-color: rgb(0, 32, 142); /* Color de fondo */
+        color: #ffffff; /* Color del texto */
+        position: relative; /* Posicionamiento relativo para manejar la sombra */
+        box-shadow: 3px 5px 0px rgb(0, 58, 255); /* Sombra inicial */
+        cursor: pointer; /* Cambia el cursor a pointer */
+        transition: transform 0.1s ease, box-shadow 0.1s ease;
     }
 
     .btn:hover {
-        box-shadow: 4px 4px 6px 0 rgba(255,255,255,.5),
-                    -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-            inset -4px -4px 6px 0 rgba(255,255,255,.5),
-            inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
-        color: #fff;
-    }
-
-    .btn:hover::after {
-        transform: scale(2) rotate(180deg);
-        background: #000;
-        box-shadow: 4px 4px 6px 0 rgba(255,255,255,.5),
-                    -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-            inset -4px -4px 6px 0 rgba(255,255,255,.5),
-            inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
-    }
+        background-color: rgb(0, 23, 100); /* Cambia el color al pasar el ratón */
+  }
+  
+  .btn:active {
+        transform: translate(4px, 6px); /* Mueve el botón hacia abajo y a la derecha */
+        box-shadow: 0 0 0 rgb(0, 58, 255); /* Mantén la sombra fija al presionar */
+        background-color: rgb(0, 32, 142); /* Cambia el color al presionar */
+  }
 
     .task-container {
         width: 500px;
