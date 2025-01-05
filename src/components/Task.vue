@@ -282,9 +282,8 @@
         display: block;
         width: 20px;
         height: 20px;
-        background-color: #ddd;
-        border: 2px solid rgb(50, 50, 50);
-        border-radius: 50%;
+        background-color: rgb(100, 135, 255);
+        border-radius: 4px;
         position: relative;
         transition: background-color 0.4s;
         overflow: hidden;
@@ -380,11 +379,10 @@
 
     .checkmark {
         display: block;
-        width: 10px;
-        height: 10px;
-        background-color: #ddd;
-        border: 2px solid rgb(50, 50, 50);
-        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(100, 135, 255);
+        border-radius: 4px;
         position: relative;
         transition: background-color 0.4s;
         overflow: hidden;
