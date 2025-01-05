@@ -112,7 +112,6 @@
         background-size: cover; /* La imagen cubre todo el contenedor */
         background-repeat: no-repeat; /* Evita repetir la imagen */
         background-position: center; /* Centra la imagen en el contenedor */
-        
     }
 
     .sub-container {
@@ -334,17 +333,16 @@
         transform: translate(-50%, -50%) rotateZ(40deg) scale(1);
     }
 
-
 /* Para móviles y pantallas pequeñas (480px o menos) */
-@media (max-width: 580px) {
+@media (max-width: 480px) {
     .sub-container {
-        width: 280px; /* Reduce aún más el ancho */
+        width: 290px; /* Reduce aún más el ancho */
         padding: 15px; /* Reduce el padding */
         gap: 10px;
     }
 
     .task-container {
-        width: 280px; /* Reduce aún más el ancho */
+        width: 290px; /* Reduce aún más el ancho */
         max-height: 300px;
         padding: 15px; /* Reduce el padding */
         gap: 10px;
@@ -383,6 +381,13 @@
         align-items: center;
         width: 100%;  /* Asegura que ocupe el 100% de su contenedor */
         border-bottom: 1px solid gray;
+    }
+
+    .edit-task {
+        width: 180px;
+        height: 10px;
+        padding: 8px;
+        font-size: 12px;
     }
 
     .buttons-options {
@@ -436,6 +441,127 @@
         font-size: 12px;
     }
 
+}
+
+@media (max-width: 360px) {
+
+    .container {
+        height: 100vh; /* Ajusta exactamente a la altura de la pantalla */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px; /* Espacio interno */
+        box-sizing: border-box; /* Asegura que padding no aumente el tamaño total */
+        gap: 20px;
+        background-image: url('../assets/bg.jpg'); /* Imagen de fondo */
+        background-size: cover; /* La imagen cubre todo el contenedor */
+        background-repeat: no-repeat; /* Evita repetir la imagen */
+        background-position: center; /* Centra la imagen en el contenedor */
+    }
+    .sub-container {
+        width: 270px; /* Reduce aún más el ancho */
+        padding: 15px; /* Reduce el padding */
+        gap: 10px;
+    }
+
+    .task-container {
+        width: 270px; /* Reduce aún más el ancho */
+        max-height: 300px;
+        padding: 15px; /* Reduce el padding */
+        gap: 10px;
+        overflow-y: auto; 
+        justify-content: flex-start;
+    }
+
+    .sub-tittle {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .write {
+        width: 170px;
+    }
+
+    h1 {
+        font-size: 22px;
+        font-weight: 600;
+        color: white;
+    }
+
+    .btn {
+        width: 70px;
+        height: 30px;
+        font-size: 12px;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .task-options {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;  /* Asegura que ocupe el 100% de su contenedor */
+        border-bottom: 1px solid gray;
+    }
+
+    .edit-task {
+        width: 170px;
+        height: 10px;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .buttons-options {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .checkmark {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: #ddd;
+        border: 2px solid rgb(50, 50, 50);
+        border-radius: 50%;
+        position: relative;
+        transition: background-color 0.4s;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    #check:checked ~ .checkmark {
+        background-color: #08bb68;
+    }
+
+    .checkmark::after {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 10px;
+        border-right: 3px solid #fff;
+        border-bottom: 3px solid #fff;
+        top: 44%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotateZ(40deg) scale(10);
+        opacity: 0;
+        transition: all 0.4s;
+    }
+
+    #check:checked ~ .checkmark::after {
+        opacity: 1;
+        transform: translate(-50%, -50%) rotateZ(40deg) scale(1);
+    }
+
+    .task-check span {
+        color: black;
+        display: inline-block;  /* Permite que el texto se ajuste dentro del contenedor */
+        width: 150px;  /* Asegura que no se desborde el contenedor */
+        line-height: 1.4;
+        font-size: 12px;
+    }
 }
 
 </style>
