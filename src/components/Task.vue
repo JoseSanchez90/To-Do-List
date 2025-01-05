@@ -123,7 +123,7 @@
         display: flex;
         flex-direction: column;
         border: 1px solid gray;
-        box-shadow: 4px 4px 1px rgb(0, 255, 64);
+        box-shadow: 4px 4px 1px rgb(100, 135, 255);
         gap: 5px;
     }
 
@@ -208,7 +208,7 @@
         flex-direction: column;
         justify-content: flex-start;
         border: 1px solid gray;
-        box-shadow: 4px 4px 1px rgb(0, 255, 64);
+        box-shadow: 4px 4px 1px rgb(100, 135, 255);
     }
 
     .task-options {
