@@ -62,7 +62,7 @@
             <p v-if="tasks.length === 0" class="no-tasks">- No hay tareas -</p>
 
             <!-- Lista de tareas -->
-            <p v-for="(task, index) in tasks" :key="index" class="sub-list">
+            <div v-for="(task, index) in tasks" :key="index" class="sub-list">
                 <!-- Mostrar el campo de edición si estamos editando esta tarea -->
                 <div v-if="editingIndex === index" class="edit-list">
                     <input type="text" v-model="editedTask" class="edit-task">
@@ -71,8 +71,8 @@
                 <!-- Mostrar la tarea normal si no está en modo edición -->
                 <div v-else class="task-options">
                     <label class="task-check">
-                        <input type="checkbox" id="check" hidden="" class="task-checkbox" :checked="task.completed" @change="toggleTask(index)" />
-                        <label for="check" class="checkmark"></label>
+                        <input type="checkbox" :id="'check-' + index" hidden class="task-checkbox" :checked="task.completed" @change="toggleTask(index)" />
+                        <label :for="'check-' + index" class="checkmark"></label>
                         <span :class="{ 'completed-task': task.completed }">
                             {{ index + 1 }}. {{ task.text }}</span>
                     </label>
@@ -85,7 +85,7 @@
                         </button>
                     </div>
                 </div>
-            </p>
+              </div>
         </div>
     </div>
 </template>
@@ -172,7 +172,7 @@
     .btn:hover {
         background-color: rgb(0, 23, 100); /* Cambia el color al pasar el ratón */
   }
-  
+
   .btn:active {
         transform: translate(4px, 6px); /* Mueve el botón hacia abajo y a la derecha */
         box-shadow: 0 0 0 rgb(0, 58, 255); /* Mantén la sombra fija al presionar */
@@ -181,7 +181,7 @@
 
     .task-container {
         width: 500px;
-        overflow-y: auto; 
+        overflow-y: auto;
         padding: 18px;
         background-color: white;
         display: flex;
@@ -208,7 +208,7 @@
         align-items: center;
         gap: 10px;
         width: 100%;
-        word-wrap: break-word; 
+        word-wrap: break-word;
     }
 
     .task-checkbox {
@@ -290,10 +290,6 @@
         cursor: pointer;
     }
 
-    #check:checked ~ .checkmark {
-        background-color: #08bb68;
-    }
-
     .checkmark::after {
         content: "";
         position: absolute;
@@ -301,14 +297,18 @@
         height: 10px;
         border-right: 3px solid #fff;
         border-bottom: 3px solid #fff;
-        top: 44%;
+        top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%) rotateZ(40deg) scale(10);
+        transform: translate(-50%, -50%) rotateZ(40deg) scale(0);
         opacity: 0;
         transition: all 0.4s;
     }
 
-    #check:checked ~ .checkmark::after {
+    .task-checkbox:checked + .checkmark {
+        background-color: #08bb68;
+    }
+
+    .task-checkbox:checked + .checkmark::after {
         opacity: 1;
         transform: translate(-50%, -50%) rotateZ(40deg) scale(1);
     }
@@ -326,7 +326,7 @@
         max-height: 300px;
         padding: 16px; /* Reduce el padding */
         gap: 10px;
-        overflow-y: auto; 
+        overflow-y: auto;
         padding: 10px;
         justify-content: flex-start;
     }
@@ -448,7 +448,7 @@
         max-height: 300px;
         padding: 15px; /* Reduce el padding */
         gap: 10px;
-        overflow-y: auto; 
+        overflow-y: auto;
         justify-content: flex-start;
     }
 

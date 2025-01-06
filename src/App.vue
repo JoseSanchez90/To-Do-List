@@ -1,9 +1,9 @@
 <script setup>
-  import Task from './components/Task.vue'
+  import taskCard from './components/taskCard.vue'
 </script>
 
 <template>
-  <Task />
+  <taskCard />
 </template>
 
 <style>
