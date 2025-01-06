@@ -313,6 +313,15 @@
         transform: translate(-50%, -50%) rotateZ(40deg) scale(1);
     }
 
+    ::-webkit-scrollbar {
+        width: 12px; /* Ancho del scrollbar */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(0, 40, 172); /* Color del scrollbar */
+        border-radius: 4px; /* Bordes redondeados */
+    }
+
 /* Para móviles y pantallas pequeñas (480px o menos) */
 @media (max-width: 580px) {
     .sub-container {
@@ -541,6 +550,7 @@
         line-height: 1.4;
         font-size: 12px;
     }
+
 }
 
 </style>
