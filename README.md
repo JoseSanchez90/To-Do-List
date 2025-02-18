@@ -1,35 +1,21 @@
-# mwtrazo-web
+# Gestor de Tareas 📝  
 
-This template should help get you started developing with Vue 3 in Vite.
+Un gestor de tareas simple para organizar tu día a día.  
 
-## Recommended IDE Setup
+## 🚀 Tecnologías  
+- Vue.js
+- JavaScript 
+- CSS
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 📥 Instalación  
+1. Clona el repositorio:  
 
-## Customize configuration
+   git clone https://github.com/JoseSanchez90/To-Do-List.git
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+2. Instala dependencias:
 
-## Project Setup
+   npm install
 
-```sh
-npm install
-```
+3. Ejecuta el Proyecto:
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+   npm run dev
